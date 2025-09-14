@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  background: #fff;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Chrome, Safari, newer versions of Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+input,
+textarea:focus,
+select {
+  box-shadow: none !important;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+select:hover {
+  cursor: pointer;
+}

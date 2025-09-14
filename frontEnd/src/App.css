@@ -1,0 +1,626 @@
+nav {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.navbar-brand > img {
+  width: 175px;
+  height: auto;
+}
+
+.footer {
+  background: #051fe8;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: left;
+}
+
+/* Back to top */
+.top-to-btm {
+  position: relative;
+}
+
+.icon-position {
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  z-index: 20;
+}
+
+.icon-style {
+  background-color: #1d91d0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.icon-style:hover {
+  animation: none;
+  background: #fff;
+  color: #1d91d0;
+  border: 2px solid #1d91d0;
+}
+
+.header-banner {
+  display: flex;
+  justify-content: center;
+  color: #020f74;
+  margin: 30px 0px 20px 0px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner > img {
+  width: 100%;
+  height: 350px;
+}
+
+.header-location {
+  display: flex;
+  justify-content: center;
+  color: #020f74;
+  margin: 30px 0px 20px 0px;
+}
+
+.show-map {
+  display: block;
+  width: 100%;
+  height: 550px;
+  margin-bottom: 30px;
+}
+
+.appointment-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+
+.appointment-btn-container > button {
+  display: flex;
+  align-items: center;
+}
+
+.appointment-btn-container > button > svg {
+  margin-right: 5px;
+}
+
+.modal-title {
+  display: flex;
+  align-items: center;
+}
+
+.modal-title > svg {
+  margin-right: 5px;
+}
+
+.btn-submit-app-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 30px 0px 20px 0px;
+}
+
+/* login */
+.bg-login {
+  min-height: 100vh;
+  display: block;
+}
+
+.form-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-title {
+  margin-bottom: 80px;
+}
+
+.logo-title > img {
+  width: 250px;
+  height: auto;
+}
+
+.form-header {
+  margin-bottom: 20px;
+}
+
+.form-header > h3,
+h4 {
+  font-weight: bold;
+  color: #454545;
+}
+
+.form-header > h6 {
+  color: #8c8c8c;
+}
+
+.form-login {
+  width: 60%;
+}
+
+.form-input-login {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.form-input-login > img {
+  width: 15px;
+  height: auto;
+  position: absolute;
+  top: 30%;
+  left: 3%;
+}
+
+.form-input-login > input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #8c8c8c;
+  border-radius: 5px;
+  background-color: #fff;
+  padding-left: 30px;
+}
+
+.btn-group-section-login {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-forgot-password {
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: right;
+  color: #2092d0;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.btn-forgot-password:hover {
+  font-weight: bold;
+}
+
+.btn-submit-login {
+  background: #2092d0;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #fff;
+  width: 100%;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.btn-submit-login:hover {
+  background: #fff;
+  border: 1px solid #2092d0;
+  color: #2092d0;
+}
+
+.cover-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.cover-login > img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.btn-submit-resetpassword {
+  background: #2092d0;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #fff;
+  width: 100%;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.btn-submit-resetpassword:hover {
+  background: #fff;
+  border: 1px solid #2092d0;
+  color: #2092d0;
+}
+
+.btn-cancel-resetpassword {
+  background: #fff;
+  border: 1px solid #2092d0;
+  border-radius: 3px;
+  color: #2092d0;
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn-cancel-resetpassword:hover {
+  background: #2092d0;
+  border: 1px solid #2092d0;
+  color: #fff;
+}
+
+.btn-resend-otp {
+  text-align: right;
+  font-size: 12px;
+  color: #8c8c8c;
+  font-weight: normal;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-resend-otp:hover {
+  font-weight: bold;
+}
+
+.btn-change-password {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  margin-top: 10px;
+  border: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-change-password:hover {
+  color: #2092d0;
+}
+
+.btn-change-password > svg {
+  color: #2092d0;
+  margin-right: 5px;
+}
+
+.form-change-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-group-section-change-password {
+  display: flex;
+  width: 100%;
+}
+
+.btn-submit-change-password {
+  background: #2092d0;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #fff;
+  width: 100%;
+  padding: 5px;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+.btn-submit-change-password:hover {
+  background: #fff;
+  border: 1px solid #2092d0;
+  color: #2092d0;
+}
+
+.btn-cancel-change-password {
+  background: #fff;
+  border: 1px solid #2092d0;
+  border-radius: 3px;
+  color: #2092d0;
+  width: 100%;
+  padding: 5px;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.btn-cancel-change-password:hover {
+  background: #2092d0;
+  border: 1px solid #2092d0;
+  color: #fff;
+}
+
+.btn-logout {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-logout:hover {
+  color: #ff3639;
+}
+
+.btn-logout > svg {
+  color: #ff3639;
+  margin-right: 5px;
+}
+
+.toggle-password-icon {
+  position: absolute;
+  right: 5%;
+  top: 18%;
+  cursor: pointer;
+}
+
+/* create account */
+.btn-create-account {
+  background: #fff;
+  border: 1px solid #595959;
+  color: #595959;
+  width: 60%;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.btn-create-account:hover {
+  background: #595959;
+  color: #fff;
+}
+
+.create-account-header {
+  color: #454545;
+}
+
+.create-account-container {
+  width: 100%;
+}
+
+.form-input-signup {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.fill-icon {
+  width: 15px;
+  height: auto;
+  position: absolute;
+  top: 33%;
+  left: 3%;
+}
+
+.password-fill-icon {
+  width: 15px;
+  height: auto;
+  position: absolute;
+  top: 29%;
+  left: 3%;
+}
+
+.form-input-signup > input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #8c8c8c;
+  border-radius: 5px;
+  background-color: #fff;
+  padding-left: 40px;
+}
+
+.company-select-create-account {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #8c8c8c;
+  border-radius: 5px;
+  background-color: #fff;
+  padding-left: 10px;
+}
+
+.btn-group-signup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 30px 0px 10px 0px;
+}
+
+.btn-submit-signup {
+  background: #2092d0;
+  border: 1px solid #2092d0;
+  border-radius: 3px;
+  padding: 5px 15px;
+  color: #fff;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.btn-submit-signup:hover {
+  background: #fff;
+  color: #2092d0;
+}
+
+.btn-cancel-signup {
+  background: #fff;
+  border: 1px solid #595959;
+  border-radius: 3px;
+  padding: 5px 15px;
+  color: #595959;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+.btn-cancel-signup:hover {
+  background: #595959;
+  color: #fff;
+}
+
+.side-menu-container {
+  width: 100%;
+  height: 100%;
+  background: #e8e8e8;
+  min-height: 100vh;
+  padding: 60px 0px 0px 20px;
+}
+
+.side-menu-container > ul {
+  padding: 0;
+}
+
+.side-menu-container > ul > li {
+  list-style: none;
+  line-height: 40px;
+}
+
+.element-container {
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.select-status {
+  background: transparent;
+  border: none;
+}
+
+.form-dental-history {
+  max-height: 150px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.dental-history-container {
+  display: grid;
+  gap: 4px;
+  margin: 5px 0px;
+}
+
+.dental-history-item {
+  padding: 4px 8px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.btn-patient-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.btn-patient-group > button{
+  font-size: 10px;
+}
+
+.add-dental-history-container {
+ display: flex;
+ align-items: center;
+}
+
+.btn-add-history {
+  font-size: 14px;
+}
+
+.input-add-dental-history {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.input-add-dental-history > input {
+  border: 1px solid #8c8c8c;
+  border-radius: 3px;
+  height: 35px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.receipt-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.receipt-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dashboard-container {
+  margin-top: 20px;
+}
+
+.card-dashboard {
+  border-radius: 15px;
+  padding: 25px;
+  color: #fff;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-dashboard > h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-dashboard > h2 > svg {
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+.card-dashboard > p {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-dashboard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-blue {
+  background: linear-gradient(135deg, #4f93ff, #0066ff);
+}
+
+.card-green {
+  background: linear-gradient(135deg, #34d399, #059669);
+}
+
+.card-purple {
+  background: linear-gradient(135deg, #a78bfa, #6d28d9);
+}
+
+.card-red {
+  background: linear-gradient(135deg, #f87171, #dc2626);
+}
