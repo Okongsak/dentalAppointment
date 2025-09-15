@@ -11,9 +11,11 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # กำหนด working directory
 WORKDIR /var/www/html
 
-# ติดตั้ง Laravel dependency
+# คัดลอกไฟล์ทั้งหมด
 COPY . .
-RUN composer install --no-scripts --no-autoloader \
-    && composer dump-autoload --optimize
 
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+# ใช้ entrypoint/command ให้รัน composer install ทุกครั้งที่ container start
+CMD composer install --no-interaction --prefer-dist --optimize-autoloader \
+    && php artisan migrate --force \
+    && php artisan serve --host=0.0.0.0 --port=8000
+

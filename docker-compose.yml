@@ -1,5 +1,4 @@
 services:
-  # Laravel Backend
   backend:
     build:
       context: ./backEnd
@@ -10,6 +9,7 @@ services:
       - "8000:8000"
     volumes:
       - ./backEnd:/var/www/html
+      - backend_vendor:/var/www/html/vendor   # กัน vendor หาย
     depends_on:
       - postgres
     environment:
@@ -66,3 +66,4 @@ services:
 
 volumes:
   postgres_data:
+  backend_vendor:
