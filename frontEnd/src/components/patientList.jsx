@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import DataTable from "react-data-table-component";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { Modal, Form } from "react-bootstrap";
+import { Modal, Form, Row, Col } from "react-bootstrap";
 import Button from "@mui/material/Button";
 import moment from "moment";
 import { FaTrashAlt } from "react-icons/fa";
@@ -275,124 +275,137 @@ const PatientList = () => {
         </Modal.Header>
         <Modal.Body>
           <Form className="form-patient" onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
-              <Form.Label>Name</Form.Label>
-              <Form.Control
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-              <Form.Label>Age</Form.Label>
-              <Form.Control
-                name="age"
-                type="text"
-                value={formData.age}
-                onChange={handleChange}
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-              <Form.Label>Gender</Form.Label>
-              <Form.Select
-                name="gender"
-                value={formData.gender}
-                onChange={handleChange}
-              >
-                <option value="">Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </Form.Select>
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-              <Form.Label>Allergies</Form.Label>
-              <Form.Control
-                name="allergies"
-                value={formData.allergies}
-                onChange={handleChange}
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-              <Form.Label>Chronic Disease</Form.Label>
-              <Form.Control
-                name="chronic_disease"
-                value={formData.chronic_disease}
-                onChange={handleChange}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Phone</Form.Label>
-              <Form.Control
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-              />
-            </Form.Group>
-
-            <div className="form-dental-history">
-              <Button
-                variant="outlined"
-                size="small"
-                type="button"
-                onClick={addDentalHistoryItem}
-                className="btn-add-history mb-3"
-              >
-                Add Dental History
-              </Button>
-              {formData.dental_history.map((item, idx) => (
-                <div key={idx} className="input-add-dental-history">
-                  <input
-                    type="date"
-                    value={item.date}
-                    onChange={(e) =>
-                      handleDentalHistoryChange(idx, {
-                        ...item,
-                        date: e.target.value,
-                      })
-                    }
+            <Row>
+              <Col xl={6}>
+                <Form.Group className="mb-3">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                   />
-                  <input
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                  <Form.Label>Age</Form.Label>
+                  <Form.Control
+                    name="age"
                     type="text"
-                    placeholder="CC"
-                    value={item.CC}
-                    onChange={(e) =>
-                      handleDentalHistoryChange(idx, {
-                        ...item,
-                        CC: e.target.value,
-                      })
-                    }
-                    required
+                    value={formData.age}
+                    onChange={handleChange}
                   />
-                  <input
-                    type="text"
-                    placeholder="Note"
-                    value={item.note}
-                    onChange={(e) =>
-                      handleDentalHistoryChange(idx, {
-                        ...item,
-                        note: e.target.value,
-                      })
-                    }
-                  />
-                  <Button
-                    variant="contained"
-                    size="small"
-                    color="error"
-                    type="button"
-                    onClick={() => removeDentalHistoryItem(idx)}
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                  <Form.Label>Gender</Form.Label>
+                  <Form.Select
+                    name="gender"
+                    value={formData.gender}
+                    onChange={handleChange}
                   >
-                    <FaTrashAlt />
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </Form.Select>
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                  <Form.Label>Phone</Form.Label>
+                  <Form.Control
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+              </Col>
+              <Col xl={6}>
+                <Form.Group className="mb-3">
+                  <Form.Label>Allergies</Form.Label>
+                  <Form.Control
+                    name="allergies"
+                    value={formData.allergies}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                  <Form.Label>Chronic Disease</Form.Label>
+                  <Form.Control
+                    name="chronic_disease"
+                    value={formData.chronic_disease}
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+
+                <div className="form-dental-history">
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    type="button"
+                    onClick={addDentalHistoryItem}
+                    className="btn-add-history mb-3"
+                  >
+                    Add Dental History
                   </Button>
+                  {formData.dental_history.map((item, idx) => (
+                    <div key={idx} className="input-add-dental-history">
+                      <div className="form-group">
+                        <input
+                          className="form-control"
+                          type="date"
+                          value={item.date}
+                          onChange={(e) =>
+                            handleDentalHistoryChange(idx, {
+                              ...item,
+                              date: e.target.value,
+                            })
+                          }
+                          required
+                        />
+                        <input
+                          className="form-control"
+                          type="text"
+                          placeholder="CC"
+                          value={item.CC}
+                          onChange={(e) =>
+                            handleDentalHistoryChange(idx, {
+                              ...item,
+                              CC: e.target.value,
+                            })
+                          }
+                          required
+                        />
+                      </div>
+                      <textarea
+                        className="form-control"
+                        placeholder="Note"
+                        value={item.note}
+                        onChange={(e) =>
+                          handleDentalHistoryChange(idx, {
+                            ...item,
+                            note: e.target.value,
+                          })
+                        }
+                        rows={2}
+                        style={{ width: "100%", resize: "vertical" }}
+                      />
+
+                      <Button
+                        variant="contained"
+                        size="small"
+                        color="error"
+                        type="button"
+                        onClick={() => removeDentalHistoryItem(idx)}
+                      >
+                        <FaTrashAlt />
+                      </Button>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </Col>
+            </Row>
 
             <div className="d-flex align-items-center justify-content-end mt-4">
               <Button variant="contained" size="medium" type="submit">

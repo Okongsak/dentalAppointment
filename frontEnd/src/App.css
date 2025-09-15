@@ -500,7 +500,7 @@ h4 {
 }
 
 .form-dental-history {
-  max-height: 150px;
+  max-height: 300px;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -540,16 +540,14 @@ h4 {
 
 .input-add-dental-history {
   display: flex;
+  flex-direction: column;
   gap: 5px;
   margin-bottom: 10px;
 }
 
-.input-add-dental-history > input {
-  border: 1px solid #8c8c8c;
-  border-radius: 3px;
-  height: 35px;
-  font-size: 14px;
-  padding-left: 10px;
+.input-add-dental-history > .form-group {
+  display: grid;
+  gap: 4px;
 }
 
 .receipt-container {
