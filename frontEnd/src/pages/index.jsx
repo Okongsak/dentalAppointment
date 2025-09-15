@@ -108,6 +108,12 @@ const IndexPage = () => {
     }
   };
 
+  const dummyReviews = [
+    { name: "คุณมลฤดี", rating: 5, text: "คุณหมอใจดีมาก …" },
+    { name: "คุณวสันต์", rating: 4, text: "ทำฟันที่นี่มาหลายครั้งแล้ว …" },
+    { name: "คุณอรทัย", rating: 5, text: "สะดวกเรื่องการนัดหมาย …" },
+  ];
+
   return (
     <div className="container">
       <div className="col-12">
@@ -245,6 +251,16 @@ const IndexPage = () => {
             ></iframe>
           </div>
         </div>
+        {dummyReviews.map((r, i) => (
+          <div key={i} className="review border-bottom pb-3 mb-3">
+            <strong>{r.name}</strong>{" "}
+            <span className="text-warning">
+              {"★".repeat(r.rating)}
+              {"☆".repeat(5 - r.rating)}
+            </span>
+            <p className="mt-2">{r.text}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
