@@ -3,9 +3,11 @@ import Dashboard from "../components/dashboard.jsx";
 import AppointmentTable from "../components/appointmentTable.jsx";
 import PatientList from "../components/patientList.jsx";
 import TransactionTable from "../components/transactionTable.jsx";
+import TransactionReport from "../components/transactionReport.jsx";
 import { AiFillDashboard } from "react-icons/ai";
 import { FaCalendarCheck, FaUsers } from "react-icons/fa";
 import { TbTransactionBitcoin } from "react-icons/tb";
+import { BiSolidReport } from "react-icons/bi";
 
 const IndexAdmin = () => {
   // state เก็บเมนูที่เลือก
@@ -16,14 +18,15 @@ const IndexAdmin = () => {
     { name: "Dashboard", icon: <AiFillDashboard /> },
     { name: "Appointment", icon: <FaCalendarCheck /> },
     { name: "Patient list", icon: <FaUsers /> },
-    { name: "Transaction", icon: <TbTransactionBitcoin /> },
+    { name: "Transaction table", icon: <TbTransactionBitcoin /> },
+    { name: "Transaction report", icon: <BiSolidReport /> },
   ];
 
   return (
     <div className="container">
       <div className="row">
         {/* Sidebar */}
-        <div className="col-md-2">
+        <div className="col-md-3 col-12">
           <div className="side-menu-container">
             <ul>
               {menuItems.map((menu) => (
@@ -48,12 +51,13 @@ const IndexAdmin = () => {
         </div>
 
         {/* Content */}
-        <div className="col-md-10">
+        <div className="col-md-9 col-12">
           <div className="element-container">
             {activeMenu === "Dashboard" && <div><Dashboard /></div>}
             {activeMenu === "Appointment" && <AppointmentTable />}
             {activeMenu === "Patient list" && <div><PatientList /></div>}
-            {activeMenu === "Transaction" && <div><TransactionTable /></div>}
+            {activeMenu === "Transaction table" && <div><TransactionTable /></div>}
+            {activeMenu === "Transaction report" && <div><TransactionReport /></div>}
           </div>
         </div>
       </div>
