@@ -181,7 +181,7 @@ const IndexPage = () => {
                 </select>
               </div>
 
-              <div className="form-group mb-3">
+              {/*<div className="form-group mb-3">
                 <label className="form-label">ชนิดบริการ</label>
                 <select
                   className="form-control"
@@ -196,6 +196,18 @@ const IndexPage = () => {
                     </option>
                   ))}
                 </select>
+              </div>*/}
+              <div className="form-group mb-3">
+                <label className="form-label">รายละเอียดบริการ</label>
+                <textarea
+                  className="form-control"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  rows={3}
+                  placeholder="ระบุบริการที่ต้องการหรือรายละเอียดเพิ่มเติม"
+                  style={{ resize: "vertical" }}
+                />
               </div>
 
               <div className="btn-submit-app-container">
